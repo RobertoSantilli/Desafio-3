@@ -1,0 +1,38 @@
+{
+"producto": {
+
+    "buzo_negro": "Buzo Negro",
+    "sweater_rosa": "Sweater rosa",
+    "patanlon_pijama_rojo": "Patanlon Pijama Rojo",
+    "buzo_azul": "Buzo Azul",
+    "zapatillas_azules": "Zapatillas Azules",
+    "remera_negra": "Remera Negra",
+    "jean_azul": "Jean Azul",
+    "campera_negra": "Campera Negra",
+    "chomba_amarilla": "Chomba Amarilla",
+    "chomba_verde": "Chomba Verde",
+    "jogging_gris": "Jogging Gris",
+    "medias_negras": "Medias Negras"
+},
+
+"precio_unit": {
+
+    "buzo_negro": 23.76,
+    "sweater_rosa": 14.86,
+    "patanlon_pijama_rojo": 12.23,
+    "buzo_azul": 25.33,
+    "zapatillas_azules": 30.33,
+    "remera_negra": 7.12,
+    "jean_azul": 11.98,
+    "campera_negra": 20.14,
+    "chomba_amarilla": 18.33,
+    "chomba_verde": 15.75,
+    "jogging_gris": 15.43,
+    "medias_negras": 5.43
+},
+
+"cantidad": {
+    "uno": 1,
+    "dos": 2
+}
+}
