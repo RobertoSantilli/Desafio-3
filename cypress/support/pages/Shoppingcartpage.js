@@ -9,7 +9,7 @@ constructor() {
 }
 
 verifyproductname(product) {
-    return cy.get('p').contains(product).should('exist').and('have.text',product);
+    cy.get('p').contains(product).and('have.text',product);
 };
 
 verifyquantityproduct(product) {

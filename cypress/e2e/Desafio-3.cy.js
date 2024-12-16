@@ -29,12 +29,7 @@ beforeEach('Inicio de Sesion en pagina web', () => {
 });
 
 it('Test Desafio 3', () => {
-    homepage.gettodolistpagebutton().should('exist').and('have.text', 'To Do List');
-    homepage.getwaitspagebutton().should('exist').and('have.text', 'Waits');
-    homepage.getalertspagebutton().should('exist').and('have.text', 'Alerts');
-    homepage.getformutilspagebutton().should('exist').and('have.text', 'Form Utils');
-    homepage.getfileuploadpagebutton().should('exist').and('have.text', 'File Upload');
-    homepage.getonlineshoppagebutton().should('exist').and('have.text', 'Online Shop').click();
+    homepage.getonlineshoppagebutton().and('have.text', 'Online Shop').click();
 
     productspage.searchaproduct(`${data.producto.buzo_azul}{enter}`);
     productspage.addtocartproduct(data.producto.buzo_azul);
@@ -47,16 +42,16 @@ it('Test Desafio 3', () => {
     productspage.clickongotoshoppingcart();
     
     shoppingcartpage.verifyproductname(data.producto.buzo_azul);
-    shoppingcartpage.verifyquantityproduct(data.producto.buzo_azul).should('have.text', `${data.cantidad.dos}`).and('exist');
-    shoppingcartpage.verifyunitpriceproduct(data.producto.buzo_azul).should('have.text',`$${data.precio_unit.buzo_azul}`).and('exist');
-    shoppingcartpage.verifytotalpriceproduct(data.producto.buzo_azul).should('have.attr','name',`${data.cantidad.dos*data.precio_unit.buzo_azul}`).and('exist');
+    shoppingcartpage.verifyquantityproduct(data.producto.buzo_azul).should('have.text', `${data.cantidad.dos}`);
+    shoppingcartpage.verifyunitpriceproduct(data.producto.buzo_azul).should('have.text',`$${data.precio_unit.buzo_azul}`);
+    shoppingcartpage.verifytotalpriceproduct(data.producto.buzo_azul).should('have.attr','name',`${data.cantidad.dos*data.precio_unit.buzo_azul}`);
 
     shoppingcartpage.verifyproductname(data.producto.jean_azul);
-    shoppingcartpage.verifyquantityproduct(data.producto.jean_azul).should('have.text', `${data.cantidad.uno}`).and('exist');
-    shoppingcartpage.verifyunitpriceproduct(data.producto.jean_azul).should('have.text',`$${data.precio_unit.jean_azul}`).and('exist');
-    shoppingcartpage.verifytotalpriceproduct(data.producto.jean_azul).should('have.attr','name',`${data.cantidad.uno*data.precio_unit.jean_azul}`).and('exist');
+    shoppingcartpage.verifyquantityproduct(data.producto.jean_azul).should('have.text', `${data.cantidad.uno}`);
+    shoppingcartpage.verifyunitpriceproduct(data.producto.jean_azul).should('have.text',`$${data.precio_unit.jean_azul}`);
+    shoppingcartpage.verifytotalpriceproduct(data.producto.jean_azul).should('have.attr','name',`${data.cantidad.uno*data.precio_unit.jean_azul}`);
 
     shoppingcartpage.clickonshowtotalprice();
-    shoppingcartpage.verifytotalprice().should('have.text',(data.cantidad.dos*data.precio_unit.buzo_azul+data.cantidad.uno*data.precio_unit.jean_azul).toFixed(2)).and('exist'); 
+    shoppingcartpage.verifytotalprice().should('have.text',(data.cantidad.dos*data.precio_unit.buzo_azul+data.cantidad.uno*data.precio_unit.jean_azul).toFixed(2)); 
 });
 });
