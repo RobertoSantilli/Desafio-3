@@ -12,8 +12,8 @@ searchaproduct(product){
 };
 
 addtocartproduct(product){
-   cy.get('p').contains(product).siblings('div').children("button[aria-label='Add to cart']").click();
-
+   cy.get(`button[name="${product}"]`).click();
+   
 };
 
 closemessageproductadded(){

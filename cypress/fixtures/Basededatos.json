@@ -1,4 +1,11 @@
 {
+
+"userdata": {
+    "name": "Roberto",
+    "lastname": "Santilli",
+    "creditcard": 1234123412341234
+},
+
 "producto": {
 
     "buzo_negro": "Buzo Negro",

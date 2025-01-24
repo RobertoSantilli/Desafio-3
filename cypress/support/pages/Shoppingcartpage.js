@@ -6,6 +6,7 @@ constructor() {
     this.unitpriceproduct = '#unitPrice';
     this.totalpriceproduct = '#totalPrice';
     this.showtotalprice = '#price';
+    this.gotobillingsummary = '[data-cy="goBillingSummary"]';
 }
 
 verifyproductname(product) {
@@ -30,6 +31,10 @@ clickonshowtotalprice(){
 
 verifytotalprice() {
     return cy.get(this.showtotalprice);
+};
+
+clickongotobillingsummary(){
+    cy.get(this.gotobillingsummary).click();
 };
 
 };
