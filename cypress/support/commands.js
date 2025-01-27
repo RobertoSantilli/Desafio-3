@@ -25,8 +25,8 @@ Cypress.Commands.add('LoginUser', (user,password) => {
         }
     }).then((response) => {
         window.localStorage.setItem('token', response.body.token);
-        window.localStorage.setItem('token', response.body.user.username);
-        window.localStorage.setItem('token', response.body.user._id);
+        window.localStorage.setItem('username', response.body.user.username);
+        window.localStorage.setItem('_id', response.body.user._id);
     })
 })
 
